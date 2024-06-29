@@ -13,7 +13,7 @@
       <a-assets>
          
         
-          <video src="./fmsol.mp4"
+          <video src="./Background.mp4"
                 preload="auto" id="vid" response-type="arraybuffer" loop  
                 crossorigin webkit-playsinline autoplay="false" playsinline>
             </video>
@@ -28,9 +28,9 @@
         
          <a-video id="example-plane" class="clickable" src="#vid" position='0 0 0' rotation='0 0 0' width='1.5' height='1'>
             </a-video>
-        <a-entity id="playbtn" class="clickable" geometry="primitive: plane; height: 0.3; width: 0.3;" position="0 0 0.1" rotation="0 0 0" material="src: #btnyt; opacity: 1; transparent: true;"></a-entity> 
-        <a-entity id="insta_click" class="clickable" geometry="primitive: plane; height: 0.3; width: 0.3;" position="0 -0.9 0" rotation="0 0 0" material="src: #btninsta; opacity: 1; transparent: true;"></a-entity>
-      <a-entity id="call_click" class="clickable"  geometry="primitive: plane; height: 0.3; width: 0.3;" position="0 0 0" rotation="0 0 0" material="src: #btnface; opacity: 1; transparent: true;"></a-entity>
+        <a-entity id="playyt" class="clickable" geometry="primitive: plane; height: 0.3; width: 0.3;" position="0 0 0.1" rotation="0 0 0" material="src: #btnyt; opacity: 1; transparent: true;"></a-entity> 
+        <a-entity id="insta_click" class="clickable" geometry="primitive: plane; height: 0.3; width: 0.3;" position="0 0 2" rotation="0 0 0" material="src: #btninsta; opacity: 1; transparent: true;"></a-entity>
+      <a-entity id="call_click" class="clickable"  geometry="primitive: plane; height: 0.3; width: 0.3;" position="0 0 3" rotation="0 0 0" material="src: #btnface; opacity: 1; transparent: true;"></a-entity>
        
       </a-entity>   
     </a-scene>
@@ -54,14 +54,19 @@
         examplePlane.remove();
        });
 
+        const playyt = document.querySelector('#playyt');
+        playyt.addEventListener("click", event => {
+       window.location.href = "https://www.youtube.com/";
+       });
+
         const insta_click = document.querySelector('#insta_click');
         insta_click.addEventListener("click", event => {
-       window.location.href = "https://instagram.com/fmullasol";
+       window.location.href = "https://www.instagram.com/?hl=en";
        });
       
        const call_click = document.querySelector('#call_click');
         call_click.addEventListener("click", event => {
-       window.location.href = "elt:+9426983936";
+       window.location.href = "https://www.facebook.com/index.php/";
        })
 
 
